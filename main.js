@@ -107,7 +107,7 @@ loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', 
     const textMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
     threeD_text = new THREE.Mesh(textGeometry, textMaterial);
 
-    threeD_textMesh.position.set(0, -25, 0);
+    threeD_text.position.set(0, -25, 0);
     scene.add(threeD_text);
 });
 
