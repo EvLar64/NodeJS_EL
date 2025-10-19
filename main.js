@@ -97,7 +97,7 @@ loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', 
         size: 10,
         height: 4,
         curveSegments: 10,
-        bevelEnables: true,
+        bevelEnabled: true,
         bevelThickness: 0.5,
         bevelSize: 0.2,
         bevelOffset: 0,
@@ -105,10 +105,10 @@ loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', 
     });
 
     const textMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
-    threeD_textMesh = new THREE.Mesh(textGeometry, textMaterial);
+    threeD_text = new THREE.Mesh(textGeometry, textMaterial);
 
-    threeD_textMesh.position.set(0, 50, 0);
-    scene.add(threeD_textMesh);
+    threeD_textMesh.position.set(0, -25, 0);
+    scene.add(threeD_text);
 });
 
 function animate() {
