@@ -2,6 +2,9 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.128.0/build/three.module.js';
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
+import { FontLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/geometries/TextGeometry.js';
+
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -81,9 +84,34 @@ torus.add(torusLine);
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(0, -10, 10);
 const ambientLight = new THREE.AmbientLight(0xffffff);
-ambientLight.position.set(25, -15, -400);
+/* ambientLight.position.set(25, -15, -400); */
 scene.add(pointLight);
 scene.add(ambientLight);
+
+/* let threeD_text;
+
+const loader = new FontLoader();
+loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', function (font) {
+    const textGeometry = new TextGeometry('SUCCESS!', {
+        font: font,
+        size: 10,
+        height: 4,
+        curveSegments: 10,
+        bevelEnabled: true,
+        bevelThickness: 0.5,
+        bevelSize: 0.2,
+        bevelOffset: 0,
+        bevelSegments: 5,
+    });
+
+    const textMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+    threeD_text = new THREE.Mesh(textGeometry, textMaterial);
+
+    threeD_text.position.set(-20, 0, -20);
+    scene.add(threeD_text);
+});
+
+*/
 
 function animate() {
     requestAnimationFrame(animate);
