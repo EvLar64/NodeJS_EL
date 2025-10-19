@@ -36,7 +36,7 @@ icoMesh.position.set(15, 0, -15);
 scene.add(icoMesh);
 
 const coneGeometry = new THREE.ConeGeometry(5, 20, 32);
-const coneMaterial = new THREE.MeshBasicMaterial({ color: 'yellow' });
+const coneMaterial = new THREE.MeshBasicMaterial({ color: 'blue' });
 const cone = new THREE.Mesh(coneGeometry, coneMaterial);
 cone.position.set(-45, 0, -15);
 cone.rotation.set(2, 0.5, 0);
