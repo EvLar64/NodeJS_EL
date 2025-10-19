@@ -84,7 +84,7 @@ torus.add(torusLine);
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(0, -10, 10);
 const ambientLight = new THREE.AmbientLight(0xffffff);
-ambientLight.position.set(25, -15, -400);
+/* ambientLight.position.set(25, -15, -400); */
 scene.add(pointLight);
 scene.add(ambientLight);
 
