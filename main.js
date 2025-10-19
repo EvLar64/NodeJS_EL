@@ -43,7 +43,7 @@ cone.rotation.set(2, 0.5, 0);
 scene.add(cone);
 
 const torusGeometry = new THREE.TorusGeometry(10, 5, 12, 80);
-const torusMaterial = new THREE.MeshBasicMaterial({ color: 'blue' });
+const torusMaterial = new THREE.MeshBasicMaterial({ color: 'green' });
 const torus = new THREE.Mesh(torusGeometry, torusMaterial);
 torus.position.set(45, 0, -15);
 torus.rotation.set(2, 0.5, 0);
