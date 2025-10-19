@@ -90,7 +90,7 @@ ambientLight.position.set(25, -15, -400);
 scene.add(pointLight);
 scene.add(ambientLight);
 
-const loader = new FontLoader();
+/* const loader = new FontLoader();
 loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', function (font) {
     const textGeometry = new TextGeometry('SUCCESS!', {
         font: font,
@@ -110,6 +110,8 @@ loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', 
     threeD_text.position.set(-20, 0, -20);
     scene.add(threeD_text);
 });
+
+*/
 
 function animate() {
     requestAnimationFrame(animate);
