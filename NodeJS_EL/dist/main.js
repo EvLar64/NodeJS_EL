@@ -2,8 +2,8 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.128.0/build/three.module.js';
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
-/* import { FontLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/FontLoader.js';
-import { TextGeometry } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/geometries/TextGeometry.js'; */
+import { FontLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/geometries/TextGeometry.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -43,7 +43,7 @@ cone.rotation.set(2, 0.5, 0);
 scene.add(cone);
 
 const torusGeometry = new THREE.TorusGeometry(10, 5, 12, 80);
-const torusMaterial = new THREE.MeshBasicMaterial({ color: 'blue' });
+const torusMaterial = new THREE.MeshBasicMaterial({ color: 'green' });
 const torus = new THREE.Mesh(torusGeometry, torusMaterial);
 torus.position.set(45, 0, -15);
 torus.rotation.set(2, 0.5, 0);
@@ -87,7 +87,7 @@ ambientLight.position.set(25, -15, -400);
 scene.add(pointLight);
 scene.add(ambientLight);
 
-/* let threeD_text;
+let threeD_text;
 
 const loader = new FontLoader();
 loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', function (font) {
@@ -109,8 +109,6 @@ loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', 
     threeD_text.position.set(-20, 0, -20);
     scene.add(threeD_text);
 });
-
-*/
 
 function animate() {
     requestAnimationFrame(animate);
