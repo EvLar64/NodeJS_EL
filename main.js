@@ -18,8 +18,6 @@ const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
 });
 
-let threeD_text;
-
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -90,7 +88,9 @@ ambientLight.position.set(25, -15, -400);
 scene.add(pointLight);
 scene.add(ambientLight);
 
-/* const loader = new FontLoader();
+/* let threeD_text;
+
+const loader = new FontLoader();
 loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', function (font) {
     const textGeometry = new TextGeometry('SUCCESS!', {
         font: font,
