@@ -2,8 +2,8 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.128.0/build/three.module.js';
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
-/* import { FontLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/FontLoader.js';
-import { TextGeometry } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/geometries/TextGeometry.js'; */ 
+import { FontLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/geometries/TextGeometry.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -87,7 +87,7 @@ ambientLight.position.set(25, -15, -400);
 scene.add(pointLight);
 scene.add(ambientLight);
 
-/* let threeD_text;
+let threeD_text;
 
 const loader = new FontLoader();
 loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', function (font) {
@@ -110,7 +110,6 @@ loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', 
     scene.add(threeD_text);
 });
 
-*/
 
 function animate() {
     requestAnimationFrame(animate);
