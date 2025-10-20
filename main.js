@@ -27,11 +27,13 @@ const tex1 = textureLoader.load('images/chowder.png');
 const tex2 = textureLoader.load('images/carpet.png');
 const tex3 = textureLoader.load('images/cup.jpg');
 const tex4 = textureLoader.load('images/portland.jpg');
+const tex5 = textureLoader.load('images/harvey.png');
 
 const chowder = new THREE.MeshBasicMaterial({ map: tex1 });
 const carpet = new THREE.MeshBasicMaterial({ map: tex2 });
 const cup = new THREE.MeshBasicMaterial({ map: tex3 });
 const portland = new THREE.MeshBasicMaterial({ map: tex4 });
+const harvey = new THREE.MeshBasicMaterial({ map: tex5 });
 
 const cubeGeometry = new THREE.BoxGeometry(10, 10, 10);
 const cubeMaterial = new THREE.MeshBasicMaterial({ color: 'pink' });
@@ -59,6 +61,12 @@ const torus = new THREE.Mesh(torusGeometry, portland);
 torus.position.set(45, 0, -15);
 torus.rotation.set(2, 0.5, 0);
 scene.add(torus);
+
+const sphereGeometry = new THREE.SphereGeometry(10,32,32);
+const sphere = new THREE.Mesh(sphereGeometry, harvey);
+sphere.position.set(45, 0, -15);
+scene.add(sphere);
+
 
 scene.add(cube);
 const cubeEdges = new THREE.EdgesGeometry(cubeGeometry);
@@ -114,6 +122,9 @@ fontOne.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.jso
     scene.add(threedtextmesh);
 }); */
 
+let sphereDir = 1;
+const sphereSpeed = 2;
+const sphereLimit = 30;
 
 function animate() {
     requestAnimationFrame(animate);
@@ -130,6 +141,10 @@ function animate() {
     torus.rotation.x -= 0.04;
     torus.rotation.y -= 0.04;
 
+    sphere.position.x += sphereSpeed * sphereDir;
+    if (sphere.position.x > sphereLimit || sphere.position.x < -sphereLimit) {
+        sphereDir *= -2;
+    }
     renderer.render(scene, camera);
 }
 animate();
