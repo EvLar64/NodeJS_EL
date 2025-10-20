@@ -110,8 +110,7 @@ fontOne.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.jso
 
     const textMaterial = new THREE.MeshPhongMaterial({ color: 0xf8f8f8 });
     const threedtextmesh = new THREE.Mesh(textGeometry, textMaterial);
-
-    textMesh.position.set(0,50,0);
+    threedtextmesh.position.set(0,50,0);
     scene.add(threedtextmesh);
 });
 
