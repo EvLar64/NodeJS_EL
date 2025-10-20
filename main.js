@@ -98,7 +98,7 @@ ambientLight.position.set(25, -15, -400);
 scene.add(pointLight);
 scene.add(ambientLight);
 
-const fontOne = new FontLoader();
+/* const fontOne = new FontLoader();
 fontOne.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
     const textGeometry = new TextGeometry('SUCCESS!', {
         font: font,
@@ -112,7 +112,7 @@ fontOne.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.jso
     const threedtextmesh = new THREE.Mesh(textGeometry, textMaterial);
     threedtextmesh.position.set(0,50,0);
     scene.add(threedtextmesh);
-});
+}); */
 
 
 function animate() {
