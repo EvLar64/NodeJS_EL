@@ -64,7 +64,7 @@ scene.add(torus);
 
 const sphereGeometry = new THREE.SphereGeometry(10,32,32);
 const sphere = new THREE.Mesh(sphereGeometry, harvey);
-sphere.position.set(45, 0, -15);
+sphere.position.set(0, -5, -15);
 scene.add(sphere);
 
 
@@ -143,7 +143,7 @@ function animate() {
 
     sphere.position.x += sphereSpeed * sphereDir;
     if (sphere.position.x > sphereLimit || sphere.position.x < -sphereLimit) {
-        sphereDir *= -2;
+        sphereDir *= -1;
     }
     renderer.render(scene, camera);
 }
