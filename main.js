@@ -1,9 +1,8 @@
-/* import './style.css' */
 import * as THREE from 'https://cdn.skypack.dev/three@0.128.0/build/three.module.js';
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
-/* import { FontLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/FontLoader.js';
-import { TextGeometry } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/geometries/TextGeometry.js'; */
+import { FontLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/geometries/TextGeometry.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -33,9 +32,6 @@ const chowder = new THREE.MeshBasicMaterial({ map: tex1 });
 const carpet = new THREE.MeshBasicMaterial({ map: tex2 });
 const cup = new THREE.MeshBasicMaterial({ map: tex3 });
 const portland = new THREE.MeshBasicMaterial({ map: tex4 });
-
-
-
 
 const cubeGeometry = new THREE.BoxGeometry(10, 10, 10);
 const cubeMaterial = new THREE.MeshBasicMaterial({ color: 'pink' });
@@ -102,28 +98,22 @@ ambientLight.position.set(25, -15, -400);
 scene.add(pointLight);
 scene.add(ambientLight);
 
-/* let threeD_text;
-
-const loader = new FontLoader();
-loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', function (font) {
+const fontOne = new FontLoader();
+fontOne.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
     const textGeometry = new TextGeometry('SUCCESS!', {
         font: font,
         size: 10,
         height: 4,
         curveSegments: 10,
-        bevelEnabled: true,
-        bevelThickness: 0.5,
-        bevelSize: 0.2,
-        bevelOffset: 0,
-        bevelSegments: 5,
+        bevelEnabled: false
     });
 
-    const textMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
-    threeD_text = new THREE.Mesh(textGeometry, textMaterial);
+    const textMaterial = new THREE.MeshPhongMaterial({ color: 0xf8f8f8 });
+    const threedtextmesh = new THREE.Mesh(textGeometry, textMaterial);
 
-    threeD_text.position.set(-20, 0, -20);
-    scene.add(threeD_text);
-}); */
+    textMesh.position.set(0,50,0);
+    scene.add(threedtextmesh);
+});
 
 
 function animate() {
