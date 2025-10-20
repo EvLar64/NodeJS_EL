@@ -22,29 +22,44 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 camera.position.set(-3, 0, 50);
 
+const textureLoader = new THREE.TextureLoader();
+
+const tex1 = textureLoader.load('images/chowder.png');
+const tex2 = textureLoader.load('images/carpet.png');
+const tex3 = textureLoader.load('images/cup.jpg');
+const tex4 = textureLoader.load('images/portland.jpg');
+
+const chowder = new THREE.MeshBasicMaterial({ map: tex1 });
+const carpet = new THREE.MeshBasicMaterial({ map: tex2 });
+const cup = new THREE.MeshBasicMaterial({ map: tex3 });
+const portland = new THREE.MeshBasicMaterial({ map: tex4 });
+
+
+
+
 const cubeGeometry = new THREE.BoxGeometry(10, 10, 10);
 const cubeMaterial = new THREE.MeshBasicMaterial({ color: 'pink' });
-const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+const cube = new THREE.Mesh(cubeGeometry, carpet);
 cube.position.set(-15, 0, -15);
 cube.rotation.set(2, 0.5, 0);
 scene.add(cube);
 
 const icoGeometry = new THREE.IcosahedronGeometry(10);
 const icoMaterial = new THREE.MeshPhongMaterial({ color: 'red' });
-const icoMesh = new THREE.Mesh(icoGeometry, icoMaterial);
+const icoMesh = new THREE.Mesh(icoGeometry, chowder);
 icoMesh.position.set(15, 0, -15);
 scene.add(icoMesh);
 
 const coneGeometry = new THREE.ConeGeometry(5, 20, 32);
 const coneMaterial = new THREE.MeshBasicMaterial({ color: 'blue' });
-const cone = new THREE.Mesh(coneGeometry, coneMaterial);
+const cone = new THREE.Mesh(coneGeometry, cup);
 cone.position.set(-45, 0, -15);
 cone.rotation.set(2, 0.5, 0);
 scene.add(cone);
 
 const torusGeometry = new THREE.TorusGeometry(10, 5, 12, 80);
 const torusMaterial = new THREE.MeshBasicMaterial({ color: 'green' });
-const torus = new THREE.Mesh(torusGeometry, torusMaterial);
+const torus = new THREE.Mesh(torusGeometry, portland);
 torus.position.set(45, 0, -15);
 torus.rotation.set(2, 0.5, 0);
 scene.add(torus);
