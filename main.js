@@ -141,10 +141,10 @@ function animate() {
     torus.rotation.x -= 0.04;
     torus.rotation.y -= 0.04;
 
-    sphere.position.x += sphereSpeed * sphereDir;
+    /* sphere.position.x += sphereSpeed * sphereDir;
     if (sphere.position.x > sphereLimit || sphere.position.x < -sphereLimit) {
         sphereDir *= -1;
-    }
+    } */
     renderer.render(scene, camera);
 }
 animate();
